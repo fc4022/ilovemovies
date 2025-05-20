@@ -1,8 +1,17 @@
 import json
 import os
-import random
 from datetime import datetime
 from mastodon import Mastodon
+
+def load_index(file):
+    if os.path.exists(file):
+        with open(file, 'r', encoding='utf-8') as f:
+            return int(f.read().strip())
+    return 0
+
+def save_index(file, index):
+    with open(file, 'w', encoding='utf-8') as f:
+        f.write(str(index))
 
 mastodon = Mastodon(
     access_token=os.getenv('MASTODON_ACCESS_TOKEN'),
@@ -12,41 +21,54 @@ mastodon = Mastodon(
 with open('posts.json', 'r', encoding='utf-8') as f:
     posts = json.load(f)
 
-def days_since(start_date_str):
-    start = datetime.strptime(start_date_str, '%Y-%m-%d')
-    return (datetime.utcnow() - start).days
+start_date = datetime.strptime('2025-05-01', '%Y-%m-%d')
+today = datetime.utcnow()
+day_count = (today - start_date).days
 
-def get_random_image():
-    stills_dir = 'stills'
-    allowed_exts = ('.jpg', '.jpeg', '.png', '.webp')
-    files = [f for f in os.listdir(stills_dir) if f.lower().endswith(allowed_exts)]
-    return os.path.join(stills_dir, random.choice(files)) if files else None
+max_text_posts = 90
 
-start_date = '2025-05-01'
-day_count = days_since(start_date)
+text_index_file = 'text_index.txt'
+reply_index_file = 'reply_index.txt'
+image_index_file = 'image_index.txt'
 
-post = random.choice(posts)
-quote = post.get('quote', '').strip()
-comment = post.get('comment', '').strip()
-title = post.get('title', '').strip()
-hashtags = post.get('hashtags', [])
+text_index = load_index(text_index_file)
+reply_index = load_index(reply_index_file)
+image_index = load_index(image_index_file)
 
-text = f"{quote} {comment}" if comment else quote
-image = get_random_image()
+if text_index >= max_text_posts:
+    # Keine weiteren Posts mehr
+    exit()
 
-if day_count % 30 == 0 and text and image:
-    media = mastodon.media_post(image)
-    main_status = mastodon.status_post(status=text, media_ids=[media])
-elif day_count % 14 == 0 and title:
-    main_status = mastodon.status_post(status=text)
-    if hashtags:
-        reply = f"{title} {' '.join(hashtags)}"
-    else:
-        reply = title
-    mastodon.status_post(status=reply, in_reply_to_id=main_status['id'])
+if day_count % 30 == 0:
+    # Bild + Quote posten (wenn möglich)
+    while image_index < len(posts):
+        post = posts[image_index]
+        image_index += 1
+        save_index(image_index_file, image_index)
+        if post['image'] and post['quote']:
+            media = mastodon.media_post(os.path.join('stills', post['image']), mime_type='image/jpeg')
+            status = mastodon.status_post(status=post['quote'], media_ids=[media])
+            if post['comment']:
+                mastodon.status_post(status=post['comment'], in_reply_to_id=status['id'])
+            break
+elif day_count % 14 == 0:
+    # Reply posten
+    while reply_index < len(posts):
+        post = posts[reply_index]
+        reply_index += 1
+        save_index(reply_index_file, reply_index)
+        if post['comment']:
+            text = post.get('film', post['comment'].strip('()'))
+            hashtag = post.get('hashtag', '')
+            if hashtag:
+                text += ' ' + hashtag
+            mastodon.status_post(text)
+            break
 else:
-    if random.choice([True, False]) and image:
-        media = mastodon.media_post(image)
-        mastodon.status_post(status='', media_ids=[media])
-    elif text:
-        mastodon.status_post(status=text)
+    # Täglichen Textpost ohne Wiederholung
+    if text_index < len(posts):
+        post = posts[text_index]
+        if post['quote']:
+            mastodon.status_post(post['quote'])
+        text_index += 1
+        save_index(text_index_file, text_index)
