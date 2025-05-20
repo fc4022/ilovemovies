@@ -25,5 +25,5 @@ jobs:
 
       - name: Run the bot
         env:
-          MASTODON_ACCESS_TOKEN: ${{ secrets.urn:ietf:wg:oauth:2.0:oob }}
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
         run: python i_love_movies.py
