@@ -63,4 +63,9 @@ else:
     post = posts[text_index]
     text_index += 1
     save_index(text_index_file, text_index)
-    mastodon.status_post(post.get('quote', ''))
+    quote = post.get('quote', '')
+    comment = post.get('comment', '')
+    if quote and comment:
+        mastodon.status_post(f"{quote} {comment}")
+    else:
+        mastodon.status_post(quote or comment)
