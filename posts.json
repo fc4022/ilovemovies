@@ -1,52 +1,374 @@
 [
   {
     "quote": "So far, so good.",
-    "image": "",
-    "comment": "(fml)"
+    "comment": "(fml)",
+    "title": "La Haine",
+    "hashtags": "#edgy #film"
   },
   {
     "quote": "I am Jack's smirking revenge.",
-    "image": "",
-    "comment": "(dead inside but kinda vibing)"
+    "comment": "(dead inside but kinda vibing)",
+    "title": "Fight Club",
+    "hashtags": "#classic #dark"
   },
   {
     "quote": "The first rule of Fight Club is: you do not talk about Fight Club.",
-    "image": "",
-    "comment": "(talking anyway)"
+    "comment": "(talking anyway)",
+    "title": "Fight Club",
+    "hashtags": "#rules #underground"
   },
   {
     "quote": "This is your life and it's ending one minute at a time.",
-    "image": "",
-    "comment": "(time is fake anyway)"
+    "comment": "(time is fake anyway)",
+    "title": "Fight Club",
+    "hashtags": "#time #existential"
   },
   {
     "quote": "Look at me. Look at me! I'm the captain now.",
-    "image": "",
-    "comment": "(but the ship is sinking)"
+    "comment": "(but the ship is sinking)",
+    "title": "Captain Phillips",
+    "hashtags": "#power #crisis"
   },
   {
     "quote": "Why so serious?",
-    "image": "",
-    "comment": "(fr no idea)"
+    "comment": "(fr no idea)",
+    "title": "The Dark Knight",
+    "hashtags": "#joker #chaos"
   },
   {
     "quote": "I'm walking here!",
-    "image": "",
-    "comment": "(life be like that)"
+    "comment": "(life be like that)",
+    "title": "Midnight Cowboy",
+    "hashtags": "#street #classic"
   },
   {
     "quote": "You can't handle the truth!",
-    "image": "",
-    "comment": "(same tbh)"
+    "comment": "(same tbh)",
+    "title": "A Few Good Men",
+    "hashtags": "#truth #courtroom"
   },
   {
     "quote": "Say hello to my little friend!",
-    "image": "",
-    "comment": "(he's imaginary)"
+    "comment": "(he's imaginary)",
+    "title": "Scarface",
+    "hashtags": "#violence #iconic"
   },
   {
     "quote": "Here's looking at you, kid.",
-    "image": "",
-    "comment": "(whatever that means)"
+    "comment": "(whatever that means)",
+    "title": "Casablanca",
+    "hashtags": "#romance #classic"
+  },
+  {
+    "quote": "I drink your milkshake!",
+    "comment": "(so thirsty)",
+    "title": "There Will Be Blood",
+    "hashtags": "#greed #power"
+  },
+  {
+    "quote": "I'm the king of the world!",
+    "comment": "(not for long)",
+    "title": "Titanic",
+    "hashtags": "#epic #disaster"
+  },
+  {
+    "quote": "Elementary, my dear Watson.",
+    "comment": "(obvious af)",
+    "title": "The Adventures of Sherlock Holmes",
+    "hashtags": "#detective #classic"
+  },
+  {
+    "quote": "You talking to me?",
+    "comment": "(paranoia vibes)",
+    "title": "Taxi Driver",
+    "hashtags": "#urban #mental"
+  },
+  {
+    "quote": "I'm gonna make him an offer he can't refuse.",
+    "comment": "(you know the deal)",
+    "title": "The Godfather",
+    "hashtags": "#mafia #classic"
+  },
+  {
+    "quote": "Hasta la vista, baby.",
+    "comment": "(cool exit)",
+    "title": "Terminator 2",
+    "hashtags": "#sci-fi #action"
+  },
+  {
+    "quote": "Keep your friends close, but your enemies closer.",
+    "comment": "(wise words)",
+    "title": "The Godfather Part II",
+    "hashtags": "#strategy #mafia"
+  },
+  {
+    "quote": "Carpe diem. Seize the day, boys.",
+    "comment": "(live fast)",
+    "title": "Dead Poets Society",
+    "hashtags": "#inspiration #life"
+  },
+  {
+    "quote": "E.T. phone home.",
+    "comment": "(alien feels)",
+    "title": "E.T.",
+    "hashtags": "#nostalgia #alien"
+  },
+  {
+    "quote": "Roads? Where we're going, we don't need roads.",
+    "comment": "(future is now)",
+    "title": "Back to the Future",
+    "hashtags": "#time #classic"
+  },
+  {
+    "quote": "I'll be back.",
+    "comment": "(promise kept)",
+    "title": "Terminator",
+    "hashtags": "#sci-fi #action"
+  },
+  {
+    "quote": "They call it a Royale with cheese.",
+    "comment": "(culture shock)",
+    "title": "Pulp Fiction",
+    "hashtags": "#quirky #cult"
+  },
+  {
+    "quote": "I'm mad as hell, and I'm not going to take this anymore!",
+    "comment": "(rage mode)",
+    "title": "Network",
+    "hashtags": "#angry #classic"
+  },
+  {
+    "quote": "Why don't you come up sometime and see me?",
+    "comment": "(flirty)",
+    "title": "She Done Him Wrong",
+    "hashtags": "#oldhollywood #charm"
+  },
+  {
+    "quote": "Here's Johnny!",
+    "comment": "(creepy af)",
+    "title": "The Shining",
+    "hashtags": "#horror #iconic"
+  },
+  {
+    "quote": "I'm having an old friend for dinner.",
+    "comment": "(creepy af)",
+    "title": "The Silence of the Lambs",
+    "hashtags": "#thriller #dark"
+  },
+  {
+    "quote": "In space, no one can hear you scream.",
+    "comment": "(terrifying)",
+    "title": "Alien",
+    "hashtags": "#horror #sci-fi"
+  },
+  {
+    "quote": "Just keep swimming.",
+    "comment": "(optimistic)",
+    "title": "Finding Nemo",
+    "hashtags": "#family #hope"
+  },
+  {
+    "quote": "I'm king of the world!",
+    "comment": "(again)",
+    "title": "Titanic",
+    "hashtags": "#epic #disaster"
+  },
+  {
+    "quote": "Wax on, wax off.",
+    "comment": "(teach me)",
+    "title": "The Karate Kid",
+    "hashtags": "#training #classic"
+  },
+  {
+    "quote": "Life is like a box of chocolates.",
+    "comment": "(surprises everywhere)",
+    "title": "Forrest Gump",
+    "hashtags": "#life #classic"
+  },
+  {
+    "quote": "Say 'what' again!",
+    "comment": "(intense)",
+    "title": "Pulp Fiction",
+    "hashtags": "#cult #intense"
+  },
+  {
+    "quote": "I see dead people.",
+    "comment": "(spooky)",
+    "title": "The Sixth Sense",
+    "hashtags": "#thriller #classic"
+  },
+  {
+    "quote": "Keep your friends close, but your enemies closer.",
+    "comment": "(repeat)",
+    "title": "The Godfather Part II",
+    "hashtags": "#strategy #mafia"
+  },
+  {
+    "quote": "I'm the king of the world!",
+    "comment": "(repeat)",
+    "title": "Titanic",
+    "hashtags": "#epic #disaster"
+  },
+  {
+    "quote": "Hasta la vista, baby.",
+    "comment": "(repeat)",
+    "title": "Terminator 2",
+    "hashtags": "#sci-fi #action"
+  },
+  {
+    "quote": "Nobody puts Baby in a corner.",
+    "comment": "(iconic)",
+    "title": "Dirty Dancing",
+    "hashtags": "#dance #classic"
+  },
+  {
+    "quote": "You had me at hello.",
+    "comment": "(romantic)",
+    "title": "Jerry Maguire",
+    "hashtags": "#romance #classic"
+  },
+  {
+    "quote": "I'm Batman.",
+    "comment": "(dark knight vibes)",
+    "title": "Batman",
+    "hashtags": "#superhero #dark"
+  },
+  {
+    "quote": "I see dead people.",
+    "comment": "(repeat spooky)",
+    "title": "The Sixth Sense",
+    "hashtags": "#thriller #classic"
+  },
+  {
+    "quote": "To infinity and beyond!",
+    "comment": "(childhood dreams)",
+    "title": "Toy Story",
+    "hashtags": "#kids #adventure"
+  },
+  {
+    "quote": "You talking to me?",
+    "comment": "(repeat paranoia)",
+    "title": "Taxi Driver",
+    "hashtags": "#urban #mental"
+  },
+  {
+    "quote": "Elementary, my dear Watson.",
+    "comment": "(repeat obvious)",
+    "title": "The Adventures of Sherlock Holmes",
+    "hashtags": "#detective #classic"
+  },
+  {
+    "quote": "Frankly, my dear, I don't give a damn.",
+    "comment": "(classic)",
+    "title": "Gone with the Wind",
+    "hashtags": "#classic #drama"
+  },
+  {
+    "quote": "I'll have what she's having.",
+    "comment": "(funny)",
+    "title": "When Harry Met Sally",
+    "hashtags": "#romcom #classic"
+  },
+  {
+    "quote": "Carpe diem. Seize the day, boys.",
+    "comment": "(repeat inspiration)",
+    "title": "Dead Poets Society",
+    "hashtags": "#inspiration #life"
+  },
+  {
+    "quote": "Hasta la vista, baby.",
+    "comment": "(repeat cool exit)",
+    "title": "Terminator 2",
+    "hashtags": "#sci-fi #action"
+  },
+  {
+    "quote": "Houston, we have a problem.",
+    "comment": "(space drama)",
+    "title": "Apollo 13",
+    "hashtags": "#space #drama"
+  },
+  {
+    "quote": "They may take our lives, but they'll never take our freedom!",
+    "comment": "(brave)",
+    "title": "Braveheart",
+    "hashtags": "#freedom #epic"
+  },
+  {
+    "quote": "May the Force be with you.",
+    "comment": "(classic)",
+    "title": "Star Wars",
+    "hashtags": "#scifi #classic"
+  },
+  {
+    "quote": "Bond. James Bond.",
+    "comment": "(cool)",
+    "title": "James Bond",
+    "hashtags": "#spy #classic"
+  },
+  {
+    "quote": "I'm the king of the world!",
+    "comment": "(third time's a charm)",
+    "title": "Titanic",
+    "hashtags": "#epic #disaster"
+  },
+  {
+    "quote": "I'll be back.",
+    "comment": "(repeat promise)",
+    "title": "Terminator",
+    "hashtags": "#sci-fi #action"
+  },
+  {
+    "quote": "I love the smell of napalm in the morning.",
+    "comment": "(war vibes)",
+    "title": "Apocalypse Now",
+    "hashtags": "#war #classic"
+  },
+  {
+    "quote": "You can't handle the truth!",
+    "comment": "(repeat same tbh)",
+    "title": "A Few Good Men",
+    "hashtags": "#truth #courtroom"
+  },
+  {
+    "quote": "I'm walking here!",
+    "comment": "(repeat life be like that)",
+    "title": "Midnight Cowboy",
+    "hashtags": "#street #classic"
+  },
+  {
+    "quote": "Why so serious?",
+    "comment": "(repeat fr no idea)",
+    "title": "The Dark Knight",
+    "hashtags": "#joker #chaos"
+  },
+  {
+    "quote": "Look at me. Look at me! I'm the captain now.",
+    "comment": "(repeat sinking)",
+    "title": "Captain Phillips",
+    "hashtags": "#power #crisis"
+  },
+  {
+    "quote": "This is your life and it's ending one minute at a time.",
+    "comment": "(repeat time fake)",
+    "title": "Fight Club",
+    "hashtags": "#time #existential"
+  },
+  {
+    "quote": "The first rule of Fight Club is: you do not talk about Fight Club.",
+    "comment": "(repeat talking anyway)",
+    "title": "Fight Club",
+    "hashtags": "#rules #underground"
+  },
+  {
+    "quote": "I am Jack's smirking revenge.",
+    "comment": "(repeat dead inside but kinda vibing)",
+    "title": "Fight Club",
+    "hashtags": "#classic #dark"
+  },
+  {
+    "quote": "So far, so good.",
+    "comment": "(repeat fml)",
+    "title": "La Haine",
+    "hashtags": "#edgy #film"
   }
 ]
